@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A stylish to-do list implemented using Django by Mahedi Hassan, a full-stack web developer.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To-Do Items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        a {
+            color: #EB796F;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .header-bar {
+            background: linear-gradient(90deg, #EB796F 0%, #EEA390 100%);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .task-wrapper {
+            background-color: #fff;
+            border-bottom: 1px solid #dfe4ea;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-title {
+            flex-grow: 1;
+        }
+
+        .task-title a {
+            color: #1d3549;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .task-icon {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .task-complete-icon {
+            background-color: #5db15d;
+        }
+
+        .task-incomplete-icon {
+            background-color: #dadada;
+        }
+
+        .delete-link {
+            text-decoration: none;
+            font-weight: 600;
+            color: #f24646;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        #add-link {
+            color: #EB796F;
+            text-decoration: none;
+            font-size: 36px;
+        }
+
+        #search-add-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .button {
+            border: none;
+            background-color: #EB796F;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+</body>
+</html>
